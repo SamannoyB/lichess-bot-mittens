@@ -23,6 +23,14 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Display Python version
+      run: python --version
+
+    - name: Display installed packages
+      run: pip list
+
     - name: Run bot
+      env:
+        LICHESS_TOKEN: lip_zam749S1tDrasvs0gFuX
       run: |
         python lichess-bot.py -u
